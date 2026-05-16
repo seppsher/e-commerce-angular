@@ -1,0 +1,49 @@
+.main-toolbar {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+
+  .nav-left {
+    display: flex;
+    gap: 16px;
+
+    a.active {
+      font-weight: 600;
+      border-bottom: 2px solid white;
+    }
+  }
+
+  .spacer {
+    flex: 1;
+  }
+}
+
+.cart-button {
+  position: relative;
+
+  .cart-badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 20px;
+    height: 20px;
+
+    background: #e53935;
+    color: white;
+
+    border-radius: 50%;
+    font-size: 11px;
+    font-weight: 600;
+
+    box-shadow: 0 0 0 2px white;
+  }
+}

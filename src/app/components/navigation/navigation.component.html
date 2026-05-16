@@ -1,0 +1,79 @@
+<mat-toolbar color="primary" class="main-toolbar">
+  <div class="nav-left">
+    <a
+      mat-button
+      [routerLink]="`${APP_ROUTES.SHOP}/${APP_ROUTES.PRODUCT_LIST}`"
+      routerLinkActive="active"
+    >
+      {{ 'navigation.shop' | translate }}
+    </a>
+
+    <a mat-button [routerLink]="APP_ROUTES.CONTACT" routerLinkActive="active">
+      {{ 'navigation.contact' | translate }}
+    </a>
+  </div>
+
+  <span class="spacer"></span>
+
+  <app-lang-switcher />
+
+  <button mat-icon-button [matMenuTriggerFor]="cartMenu" aria-label="Koszyk" class="cart-button">
+    <mat-icon>shopping_cart</mat-icon>
+
+    @if (totalItems() > 0) {
+      <span class="cart-badge">{{ totalItems() }}</span>
+    }
+  </button>
+
+  <mat-menu #cartMenu="matMenu" class="cart-menu-panel">
+    @if (items().length === 0) {
+      <div class="empty-cart">
+        {{ 'navigation.cart.empty' | translate }}
+      </div>
+    } @else {
+      <div class="cart-header">
+        <h3>{{ 'navigation.cart.title' | translate }}</h3>
+        <span>
+          {{ 'navigation.cart.items' | translate: { count: totalItems() } }}
+        </span>
+      </div>
+
+      <mat-divider></mat-divider>
+
+      <div class="cart-list">
+        @for (item of items(); track item.id) {
+          <div class="cart-item">
+            <div class="info">
+              <h4>{{ item.name }}</h4>
+              <p>{{ item.price }} zł</p>
+            </div>
+
+            <div class="quantity">× {{ item.quantity }}</div>
+          </div>
+        }
+      </div>
+
+      <mat-divider></mat-divider>
+
+      <div class="summary">
+        <div class="total">
+          <span>
+            {{ 'navigation.cart.summary' | translate }}
+          </span>
+          <strong>
+            {{ 'navigation.cart.total' | translate: { amount: totalPrice() } }}
+          </strong>
+        </div>
+
+        <button
+          mat-flat-button
+          color="primary"
+          [routerLink]="`${APP_ROUTES.SHOP}/${APP_ROUTES.CART}`"
+          class="checkout-btn"
+        >
+          {{ 'navigation.cart.checkout' | translate }}
+        </button>
+      </div>
+    }
+  </mat-menu>
+</mat-toolbar>

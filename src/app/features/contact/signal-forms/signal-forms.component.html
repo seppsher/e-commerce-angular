@@ -1,0 +1,101 @@
+<form class="contact-form" [formRoot]="contactForm">
+  <section class="section">
+    <h2>{{ 'contact.headers.personalData' | translate }}</h2>
+
+    <mat-form-field appearance="outline" class="full">
+      <mat-label>{{ 'contact.form.name' | translate }}</mat-label>
+      <input matInput [formField]="contactForm.name" />
+      <app-field-errors [field]="contactForm.name()" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full">
+      <mat-label>{{ 'contact.form.lastName' | translate }}</mat-label>
+      <input matInput [formField]="contactForm.lastName" />
+      <app-field-errors [field]="contactForm.lastName()" />
+    </mat-form-field>
+  </section>
+
+  <section class="section">
+    <h2>{{ 'contact.headers.message' | translate }}</h2>
+
+    <mat-form-field appearance="outline" class="full">
+      <mat-label>{{ 'contact.form.topic.label' | translate }}</mat-label>
+      <mat-select [formField]="contactForm.topic">
+        <mat-option value="product">{{ 'contact.form.topic.product' | translate }}</mat-option>
+        <mat-option value="cooperation">{{
+          'contact.form.topic.cooperation' | translate
+        }}</mat-option>
+        <mat-option value="complaint">{{ 'contact.form.topic.complaint' | translate }}</mat-option>
+        <mat-option value="other">{{ 'contact.form.topic.other' | translate }}</mat-option>
+      </mat-select>
+
+      <app-field-errors [field]="contactForm.topic()" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full">
+      <mat-label>{{ 'contact.form.message' | translate }}</mat-label>
+      <textarea matInput rows="5" [formField]="contactForm.message"></textarea>
+      <app-field-errors [field]="contactForm.message()" />
+    </mat-form-field>
+  </section>
+
+  <section class="section">
+    <h2>{{ 'contact.headers.companyData' | translate }}</h2>
+
+    <mat-checkbox [formField]="contactForm.isCompany">
+      {{ 'contact.form.isCompany' | translate }}
+    </mat-checkbox>
+
+    <mat-form-field appearance="outline" class="full">
+      <mat-label>{{ 'contact.form.companyName' | translate }}</mat-label>
+      <input matInput [formField]="contactForm.companyName" />
+      <app-field-errors [field]="contactForm.companyName()" />
+    </mat-form-field>
+  </section>
+
+  <section class="section">
+    <h2>{{ 'contact.headers.contacts' | translate }}</h2>
+
+    <div class="email-list">
+      @for (contact of contactForm.contact; let index = $index; track index) {
+        <div class="contact-item">
+          <h3>{{ 'contact.subheaders.contacts' | translate: { index: index + 1 } }}</h3>
+
+          <mat-form-field appearance="outline" class="full">
+            <mat-label>{{ 'contact.form.email' | translate }}</mat-label>
+            <input matInput type="text" [formField]="contact.email" />
+            <app-field-errors [field]="contact.email()" />
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="full">
+            <mat-label>{{ 'contact.form.phone' | translate }}</mat-label>
+            <input matInput [formField]="contact.phone" />
+            <app-field-errors [field]="contact.phone()" />
+          </mat-form-field>
+
+          <button mat-button color="warn" type="button" (click)="deleteItem(index)">
+            {{ 'contact.actions.delete' | translate }}
+          </button>
+        </div>
+      }
+    </div>
+
+    <button mat-stroked-button color="primary" type="button" (click)="addItem()">
+      {{ 'contact.actions.addContact' | translate }}
+    </button>
+  </section>
+
+  <section class="section">
+    <mat-checkbox class="full rodo-checkbox" [formField]="contactForm.rodoConsent">
+      {{ 'contact.form.rodoConsent' | translate }}
+    </mat-checkbox>
+
+    <app-field-errors [field]="contactForm.rodoConsent()" />
+  </section>
+
+  <div class="form-footer">
+    <button mat-raised-button color="primary" type="submit">
+      {{ 'contact.actions.submit' | translate }}
+    </button>
+  </div>
+</form>

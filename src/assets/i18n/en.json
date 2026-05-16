@@ -1,0 +1,91 @@
+{
+  "global": {
+    "loading": "Loading...",
+    "delete": "Delete",
+    "close": "Close",
+    "notifications": {
+      "itemAdded": "Added to cart: {{ name }}",
+      "itemRemoved": "Removed from cart: {{ name }}"
+    },
+    "validation": {
+      "required": "This field is required",
+      "email": "Please enter a valid email address",
+      "minLength": "Please enter at least {{ length }} characters",
+      "maxLength": "Maximum length is {{ length }} characters",
+      "phone": "Please enter a valid phone number in the format XXXXXXXXX"
+    }
+  },
+  "navigation": {
+    "shop": "Shop",
+    "contact": "Contact",
+    "cart": {
+      "name:": "Cart",
+      "title": "Your cart",
+      "empty": "Your cart is empty",
+      "checkout": "Go to cart",
+      "summary": "Total:",
+      "items": "{{ count }} items",
+      "total": "{{ amount }} zł",
+      "goToPayment": "Go to Payment"
+    }
+  },
+  "payment": {
+    "placeholder": {
+      "title": "Payment Gateway Placeholder",
+      "description": "This section will soon host a fully integrated payment gateway. For now, it demonstrates how the checkout flow transitions into a dedicated <b>microfrontend</b>."
+    }
+  },
+  "productItem": {
+    "actions": {
+      "details": "Details",
+      "addToCart": "Add to cart"
+    }
+  },
+  "productsList": {
+    "filters": {
+      "gender": {
+        "label": "Filter by gender",
+        "all": "All",
+        "men": "Men",
+        "women": "Women",
+        "children": "Children"
+      }
+    },
+    "actions": {
+      "apply": "Apply filters"
+    }
+  },
+  "contact": {
+    "headers": {
+      "personalData": "Personal data",
+      "companyData": "Company data",
+      "message": "Message",
+      "contacts": "Contacts"
+    },
+    "subheaders": {
+      "contacts": "Contact {{ index }}"
+    },
+    "form": {
+      "name": "First name",
+      "lastName": "Last name",
+      "email": "Email",
+      "phone": "Phone",
+      "message": "Message",
+      "isCompany": "Business contact?",
+      "companyName": "Company name",
+      "topic": {
+        "label": "Message topic",
+        "product": "Product inquiry",
+        "cooperation": "Cooperation",
+        "complaint": "Complaint",
+        "other": "Other"
+      },
+      "rodoConsent": "I consent to the processing of my personal data in accordance with the privacy policy"
+    },
+    "actions": {
+      "addContact": "Add contact",
+      "delete": "Delete",
+      "submit": "Send"
+    }
+  }
+}

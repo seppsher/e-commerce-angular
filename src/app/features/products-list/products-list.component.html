@@ -1,0 +1,31 @@
+<div class="filters-wrapper">
+  <mat-form-field appearance="outline" class="filter-field">
+    <mat-label>
+      {{ 'productsList.filters.gender.label' | translate }}
+    </mat-label>
+    <mat-select [formField]="form.gender">
+      <mat-option [value]="null">
+        {{ 'productsList.filters.gender.all' | translate }}
+      </mat-option>
+      <mat-option value="men">
+        {{ 'productsList.filters.gender.men' | translate }}
+      </mat-option>
+      <mat-option value="women">
+        {{ 'productsList.filters.gender.women' | translate }}
+      </mat-option>
+      <mat-option value="children">
+        {{ 'productsList.filters.gender.children' | translate }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="button" (click)="onSubmit()" class="filter-btn">
+    {{ 'productsList.actions.apply' | translate }}
+  </button>
+</div>
+
+<div class="product-list-wrapper">
+  @for (item of products(); track $index) {
+    <app-product-item [product]="item"></app-product-item>
+  }
+</div>

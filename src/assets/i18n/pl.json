@@ -1,0 +1,91 @@
+{
+  "global": {
+    "loading": "Ładowanie...",
+    "delete": "Usuń",
+    "close": "Zamknij",
+    "notifications": {
+      "itemAdded": "Dodano do koszyka: {{ name }}",
+      "itemRemoved": "Usunięto z koszyka: {{ name }}"
+    },
+    "validation": {
+      "required": "To pole jest wymagane",
+      "email": "Podaj poprawny adres email",
+      "minLength": "Wprowadź co najmniej {{ length }} znaków",
+      "maxLength": "Maksymalna długość to {{ length }} znaków",
+      "phone": "Podaj poprawny numer telefonu w formacie XXXXXXXXX"
+    }
+  },
+  "navigation": {
+    "shop": "Sklep",
+    "contact": "Kontakt",
+    "cart": {
+      "name:": "Koszyk",
+      "title": "Twój koszyk",
+      "empty": "Twój koszyk jest pusty",
+      "checkout": "Przejdź do koszyka",
+      "summary": "Razem:",
+      "items": "{{ count }} produktów",
+      "total": "{{ amount }} zł",
+      "goToPayment": "Przejdź do płatności"
+    }
+  },
+  "payment": {
+    "placeholder": {
+      "title": "Moduł Płatności",
+      "description": "Ta sekcja w przyszłości będzie zawierać w pełni zintegrowaną bramkę płatności. Na razie demonstruje, w jaki sposób proces checkoutu przechodzi do dedykowanego <b>mikrofrontendu</b>."
+    }
+  },
+  "productItem": {
+    "actions": {
+      "details": "Szczegóły",
+      "addToCart": "Dodaj do koszyka"
+    }
+  },
+  "productsList": {
+    "filters": {
+      "gender": {
+        "label": "Filtruj po płci",
+        "all": "Wszystkie",
+        "men": "Mężczyzna",
+        "women": "Kobieta",
+        "children": "Dziecko"
+      }
+    },
+    "actions": {
+      "apply": "Filtruj"
+    }
+  },
+  "contact": {
+    "headers": {
+      "personalData": "Dane osobowe",
+      "companyData": "Dane firmy",
+      "message": "Wiadomość",
+      "contacts": "Kontakty"
+    },
+    "subheaders": {
+      "contacts": "Kontakt {{ index }}"
+    },
+    "form": {
+      "name": "Imię",
+      "lastName": "Nazwisko",
+      "email": "Email",
+      "phone": "Telefon",
+      "message": "Wiadomość",
+      "isCompany": "Kontakt firmowy?",
+      "companyName": "Nazwa firmy",
+      "topic": {
+        "label": "Temat wiadomości",
+        "product": "Pytanie o produkt",
+        "cooperation": "Współpraca",
+        "complaint": "Reklamacja",
+        "other": "Inne"
+      },
+      "rodoConsent": "Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z polityką prywatności"
+    },
+    "actions": {
+      "addContact": "Dodaj kontakt",
+      "delete": "Usuń",
+      "submit": "Wyślij"
+    }
+  }
+}

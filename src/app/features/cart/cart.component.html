@@ -1,0 +1,47 @@
+<h1 class="cart-title">{{ 'navigation.cart.title' | translate }}</h1>
+
+@if (items().length === 0) {
+  <p class="empty-cart">{{ 'navigation.cart.empty' | translate }}</p>
+} @else {
+  <div class="cart-container">
+    <div class="cart-list">
+      @for (item of items(); track item.id) {
+        <div class="cart-item">
+          <div class="info">
+            <h3>{{ item.name }}</h3>
+            <p class="price">{{ item.price }} zł</p>
+          </div>
+
+          <div class="quantity">
+            <button mat-icon-button (click)="decrease(item.id)">
+              <mat-icon>remove</mat-icon>
+            </button>
+
+            <span class="qty">{{ item.quantity }}</span>
+
+            <button mat-icon-button (click)="increase(item.id)">
+              <mat-icon>add</mat-icon>
+            </button>
+          </div>
+
+          <button mat-button color="warn" class="remove" (click)="remove(item.id)">
+            {{ 'global.delete' | translate }}
+          </button>
+        </div>
+      }
+    </div>
+
+    <div class="summary">
+      <div class="total-row">
+        <span>{{ 'navigation.cart.summary' | translate }}</span>
+        <strong>{{ 'navigation.cart.total' | translate: { amount: totalPrice() } }}</strong>
+      </div>
+
+      <button mat-raised-button color="primary" class="payment-btn" (click)="createOrder()">
+        {{ 'navigation.cart.goToPayment' | translate }}
+      </button>
+    </div>
+  </div>
+}
+
+<router-outlet />

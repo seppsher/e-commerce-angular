@@ -1,0 +1,16 @@
+<mat-card>
+  <img [src]="product().photo" alt="{{ product().productName }}" />
+
+  <h4>{{ product().productName }}</h4>
+  <p class="brand">{{ product().brand }}</p>
+  <p class="brand">{{ product().gender }}</p>
+
+  <div class="price">{{ product().price }} zł</div>
+
+  <button matButton class="add-btn" (click)="addToCart(product())">
+    {{ 'productItem.actions.addToCart' | translate }}
+  </button>
+  <button matButton [routerLink]="['/', APP_ROUTES.SHOP, APP_ROUTES.PRODUCT, product().id]">
+    {{ 'productItem.actions.details' | translate }}
+  </button>
+</mat-card>
