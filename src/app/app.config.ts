@@ -1,5 +1,5 @@
 import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { provideRouter, withHashLocation } from '@angular/router';
 
 import { routes } from './app.routes';
 import { provideHttpClient, withInterceptors, withXhr } from '@angular/common/http';
@@ -20,11 +20,11 @@ if (!allowedLangs.includes(savedLang)) {
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
-    provideRouter(routes),
+    provideRouter(routes, withHashLocation()),
     provideHttpClient(withXhr(), withInterceptors([loaderInterceptor, errorInterceptor])),
     provideTranslateService({
       loader: provideTranslateHttpLoader({
-        prefix: '/assets/i18n/',
+        prefix: 'assets/i18n/',
         suffix: '.json',
       }),
       fallbackLang: 'en',

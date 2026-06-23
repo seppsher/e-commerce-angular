@@ -1,5 +1,7 @@
 # 🛍️ Shop App — Angular 22 (Zoneless, Standalone, Signals‑based, OnPush) + Material + Reactive & Signals Forms + NgRx Signals Store
 
+## 🚀 Live Demo - [click here](https://seppsher.github.io/e-commerce-angular)
+
 A modern e‑commerce front‑end built with **Angular 22**, using the **standalone application architecture**, **zoneless rendering**, and **signal‑driven change detection**.  
 The entire application runs with **OnPush semantics by default**, ensuring predictable and highly performant UI updates.
 
@@ -60,6 +62,19 @@ Vitest provides a lightweight and fast workflow, fully compatible with Angular�
 
 ---
 
+## 🌍 Multi‑language Support (PL / EN)
+
+The application includes full **internationalization**, featuring:
+
+- dynamic language switching (PL / EN)
+- persistent language preference stored in `localStorage`
+- translation files loaded from `assets/i18n`
+- integration with `@ngx-translate/core` and `TranslateHttpLoader`
+
+All UI labels, buttons, messages and validation errors are fully translated.
+
+---
+
 ## 🤖 AI‑Assisted Development
 
 During development, the project leveraged:
@@ -71,6 +86,16 @@ Both tools significantly accelerated development and improved code quality.
 
 ---
 
+## 🏗️ Production build
+
+To generate a fully optimized production build, run:
+
+```bash
+npm run build
+```
+
+---
+
 ## Development server
 
 To start a local development server, run:
@@ -78,3 +103,9 @@ To start a local development server, run:
 ```bash
 ng serve
 ```
+
+---
+
+## 🧩 Node.js & npm versions
+
+The Angular CLI requires a minimum Node.js version of v22.22.3 or v24.15.0
