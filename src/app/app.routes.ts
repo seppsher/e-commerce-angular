@@ -1,3 +1,4 @@
+import { Type } from '@angular/core';
 import { Routes } from '@angular/router';
 import { ContactComponent } from '@features/contact/contact.component';
 import { productResolver } from '@features/product/resolvers/product.resolver';
@@ -37,9 +38,14 @@ export const routes: Routes = [
         loadComponent: () => import('@features/cart/cart.component').then(m => m.CartComponent),
         children: [
           {
-            path: `:id`,
+            path: `:orderId`,
             loadComponent: () =>
-              import('@features/payment/payment.component').then(m => m.PaymentComponent),
+              import('@angular-architects/native-federation').then(({ loadRemoteModule }) =>
+                loadRemoteModule<{ PaymentComponent: Type<unknown> }>(
+                  'payment-remote',
+                  './PaymentComponent',
+                ).then(remote => remote.PaymentComponent),
+              ),
           },
         ],
       },
