@@ -98,11 +98,15 @@ npm run build
 
 ## Development server
 
-To start a local development server, run:
+Start the host in this repository:
 
 ```bash
-ng serve
+npm start
 ```
+
+The host runs on `http://localhost:4200` and loads the payment remote from the separate payment repository at `http://localhost:4201`.
+
+For GitHub Pages, configure the repository variable `PAYMENT_REMOTE_URL` with the public base URL of the payment repository. The deployment workflow uses it to generate the production remote URL; the local manifest remains configured for `localhost:4201`.
 
 ---
 

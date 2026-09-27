@@ -25,6 +25,16 @@ jobs:
       - name: Install dependencies
         run: npm install --legacy-peer-deps
 
+      - name: Configure payment remote URL
+        env:
+          PAYMENT_REMOTE_URL: ${{ vars.PAYMENT_REMOTE_URL }}
+        run: |
+          if [ -z "$PAYMENT_REMOTE_URL" ]; then
+            echo "PAYMENT_REMOTE_URL GitHub Actions variable is not configured"
+            exit 1
+          fi
+          node -e "const fs = require('fs'); const path = 'public/federation.manifest.json'; const manifest = JSON.parse(fs.readFileSync(path, 'utf8')); manifest['payment-remote'] = process.env.PAYMENT_REMOTE_URL.replace(/\\/$/, '') + '/remoteEntry.json'; fs.writeFileSync(path, JSON.stringify(manifest, null, 2) + '\\n');"
+
       - name: Build Angular app
         run: npm run build -- --configuration production
 
