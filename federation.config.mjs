@@ -6,7 +6,7 @@ export default withNativeFederation({
 
   shared: {
     ...shareAll(
-      { singleton: true, strictVersion: true, requiredVersion: 'auto', build: 'package' },
+      { singleton: true, strictVersion: true, requiredVersion: 'auto' },
       {
         overrides: {
           // includeSecondaries is an opt-out of ignoreUnusedDeps, so all of
@@ -15,7 +15,6 @@ export default withNativeFederation({
             singleton: true,
             strictVersion: true,
             requiredVersion: 'auto',
-            build: 'package',
             includeSecondaries: { keepAll: true },
           },
         },
