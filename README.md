@@ -39,6 +39,8 @@ The project demonstrates clean architecture, scalable state management, and two 
 - **Reactive Forms**
 - **Angular Material**
 - **NgRx Signals Store**
+- **Native Federation** — host application loads the payment remote as a microfrontend
+- **Private npm package** — reusable UI components and utilities from `@seppsher/seepsher-ui` on GitHub Packages
 - **TypeScript**
 - **RxJS**
 - **HTML, SCSS**
@@ -104,13 +106,13 @@ Start the host in this repository:
 npm start
 ```
 
-The host runs on `http://localhost:4200` and loads the payment remote from the separate payment repository at `http://localhost:4201`.
+The host runs on `http://localhost:4200` and uses **Native Federation** to load the payment remote from the separate payment repository at `http://localhost:4201`.
 
 For GitHub Pages, configure the repository variable `PAYMENT_REMOTE_URL` with the public base URL of the payment repository. The deployment workflow uses it to generate the production remote URL; the local manifest remains configured for `localhost:4201`.
 
 ## Private UI package
 
-The app uses `@seppsher/seepsher-ui` from GitHub Packages. To install dependencies locally, authenticate with a GitHub personal access token (classic) that has `read:packages`:
+The app uses the private npm package [`@seppsher/seepsher-ui`](https://github.com/seppsher/e-commerce-angular/pkgs/npm/seepsher-ui) from GitHub Packages. It contains reusable Angular UI components, directives, validators, interceptors, and services. To install dependencies locally, authenticate with a GitHub personal access token (classic) that has `read:packages`:
 
 ```bash
 npm login --scope=@seppsher --auth-type=legacy --registry=https://npm.pkg.github.com
