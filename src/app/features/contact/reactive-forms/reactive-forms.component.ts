@@ -8,9 +8,8 @@ import { ReactiveFormsModule, Validators } from '@angular/forms';
 import { ReactiveFormsFormStateService } from './reactive-forms-form-state.service';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { MatSelectModule } from '@angular/material/select';
-import { FieldErrorsComponent } from '@components/field-errors/reactive-forms/field-errors.component';
+import { ReactiveFieldErrorsComponent, ScrollToFirstErrorDirective } from 'seepsher-ui';
 import { TranslatePipe } from '@ngx-translate/core';
-import { ScrollToFirstErrorDirective } from '@directives/scroll-to-error.directive';
 
 @Component({
   selector: 'app-reactive-forms',
@@ -21,7 +20,7 @@ import { ScrollToFirstErrorDirective } from '@directives/scroll-to-error.directi
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    FieldErrorsComponent,
+    ReactiveFieldErrorsComponent,
     MatCheckbox,
     MatSelectModule,
     TranslatePipe,

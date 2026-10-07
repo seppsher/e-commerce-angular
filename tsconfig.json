@@ -15,6 +15,7 @@
     "target": "ES2022",
     "module": "preserve",
     "paths": {
+      "seepsher-ui": ["./projects/seepsher-ui/dist"],
       "@components/*": ["./src/app/components/*"],
       "@directives/*": ["./src/app/directives/*"],
       "@constants/*": ["./src/app/constants/*"],

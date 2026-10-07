@@ -3,8 +3,7 @@ import { provideRouter, withHashLocation } from '@angular/router';
 
 import { routes } from './app.routes';
 import { provideHttpClient, withInterceptors, withXhr } from '@angular/common/http';
-import { loaderInterceptor } from '@interceptors/loader/loader.interceptor';
-import { errorInterceptor } from '@interceptors/error/error.interceptor';
+import { errorInterceptor, loaderInterceptor } from 'seepsher-ui';
 import { provideTranslateService } from '@ngx-translate/core';
 import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
 
