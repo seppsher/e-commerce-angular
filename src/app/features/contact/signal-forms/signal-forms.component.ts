@@ -16,7 +16,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCheckbox } from '@angular/material/checkbox';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-import { phoneSchema, scrollToFirstError, SignalFieldErrorsComponent } from 'seepsher-ui';
+import { phoneSchema, scrollToFirstError, SignalFieldErrorsComponent } from '@seppsher/seepsher-ui';
 import { Contact, ContactFormModel } from './models/contact.model';
 import { MatSelectModule } from '@angular/material/select';
 import { TranslatePipe } from '@ngx-translate/core';

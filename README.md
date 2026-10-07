@@ -108,6 +108,17 @@ The host runs on `http://localhost:4200` and loads the payment remote from the s
 
 For GitHub Pages, configure the repository variable `PAYMENT_REMOTE_URL` with the public base URL of the payment repository. The deployment workflow uses it to generate the production remote URL; the local manifest remains configured for `localhost:4201`.
 
+## Private UI package
+
+The app uses `@seppsher/seepsher-ui` from GitHub Packages. To install dependencies locally, authenticate with a GitHub personal access token (classic) that has `read:packages`:
+
+```bash
+npm login --scope=@seppsher --auth-type=legacy --registry=https://npm.pkg.github.com
+npm install
+```
+
+Use your GitHub username and enter the token as the password. Do not commit the token. The library source remains in `projects/seepsher-ui` for browsing and package releases.
+
 ---
 
 ## 🧩 Node.js & npm versions

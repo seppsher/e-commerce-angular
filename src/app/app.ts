@@ -3,7 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { NavigationComponent } from '@components/navigation/navigation.component';
 import { CartStore } from '@store/cart.store';
-import { LoaderComponent } from 'seepsher-ui';
+import { LoaderComponent } from '@seppsher/seepsher-ui';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({

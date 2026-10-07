@@ -3,11 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "npm run build:ui && ng serve",
-    "build:ui": "npm --prefix projects/seepsher-ui run build",
-    "build": "npm run build:ui && ng build --configuration production",
+    "start": "ng serve",
+    "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
-    "test": "npm run build:ui && ng test",
+    "test": "ng test",
     "lint": "ng lint",
     "format": "prettier --write \"src/**/*.{ts,html,scss}\""
   },
@@ -23,6 +22,7 @@
     "@angular/platform-browser": "^22.0.2",
     "@angular/router": "^22.0.2",
     "@ngrx/signals": "^21.1.0",
+    "@seppsher/seepsher-ui": "^0.1.0",
     "@ngx-translate/core": "^17.0.0",
     "@ngx-translate/http-loader": "^17.0.0",
     "es-module-shims": "^2.8.0",

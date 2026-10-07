@@ -8,7 +8,6 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      'seepsher-ui': '/projects/seepsher-ui/src/public-api.ts',
       '@components': '/src/app/components',
       '@constants': '/src/app/constants',
       '@features': '/src/app/features',
