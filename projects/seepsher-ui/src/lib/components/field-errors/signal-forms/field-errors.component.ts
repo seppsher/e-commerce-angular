@@ -11,7 +11,6 @@ import { TranslatePipe } from '@ngx-translate/core';
       @if (field().getError('required')) {
         <mat-error>{{ 'global.validation.required' | translate }}</mat-error>
       }
-
       @if (field().getError('email')) {
         <mat-error>{{ 'global.validation.email' | translate }}</mat-error>
       }
@@ -23,7 +22,6 @@ import { TranslatePipe } from '@ngx-translate/core';
           }}
         </mat-error>
       }
-
       @if (field().getError('maxLength')) {
         <mat-error>
           {{
@@ -32,13 +30,12 @@ import { TranslatePipe } from '@ngx-translate/core';
           }}
         </mat-error>
       }
-
       @if (field().getError('phone')) {
         <mat-error>{{ 'global.validation.phone' | translate }}</mat-error>
       }
     }
   `,
 })
-export class FieldErrorsComponent {
+export class SignalFieldErrorsComponent {
   field = input.required<FieldState<unknown>>();
 }

@@ -1,7 +1,7 @@
 import { inject, Injectable } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ContactFormModel, EmailContact } from './models/contact.model';
-import { phoneValidator } from '@forms/phone.validator';
+import { phoneValidator } from 'seepsher-ui';
 
 @Injectable()
 export class ReactiveFormsFormStateService {

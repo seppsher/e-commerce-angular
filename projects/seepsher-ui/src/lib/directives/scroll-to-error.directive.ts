@@ -14,17 +14,12 @@ export class ScrollToFirstErrorDirective {
     form.markAllAsTouched();
 
     const formEl = this.host.nativeElement;
-
     const firstInvalid = formEl.querySelector('.ng-invalid') as HTMLElement | null;
     if (!firstInvalid) return;
 
     const top = firstInvalid.getBoundingClientRect().top + window.scrollY - 70;
 
-    window.scrollTo({
-      top,
-      behavior: 'smooth',
-    });
-
+    window.scrollTo({ top, behavior: 'smooth' });
     firstInvalid.focus({ preventScroll: true });
   }
 }

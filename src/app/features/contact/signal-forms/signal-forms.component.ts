@@ -16,12 +16,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCheckbox } from '@angular/material/checkbox';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-import { phoneSchema } from '@forms/phone.schema';
+import { phoneSchema, scrollToFirstError, SignalFieldErrorsComponent } from 'seepsher-ui';
 import { Contact, ContactFormModel } from './models/contact.model';
 import { MatSelectModule } from '@angular/material/select';
-import { FieldErrorsComponent } from '@components/field-errors/signal-forms/field-errors.component';
 import { TranslatePipe } from '@ngx-translate/core';
-import { scrollToFirstError } from '@helpers/scroll-to-first-error';
 
 @Component({
   selector: 'app-signal-forms',
@@ -32,7 +30,7 @@ import { scrollToFirstError } from '@helpers/scroll-to-first-error';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    FieldErrorsComponent,
+    SignalFieldErrorsComponent,
     MatCheckbox,
     MatSelectModule,
     TranslatePipe,
