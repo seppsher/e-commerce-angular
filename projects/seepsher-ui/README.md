@@ -7,7 +7,7 @@ Reusable Angular components and utilities for forms and HTTP feedback.
 From the repository root, install dependencies and build the library:
 
 ```sh
-npm install --legacy-peer-deps
+npm install
 npm run build:ui
 ```
 
