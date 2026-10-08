@@ -2,14 +2,12 @@
 
 # Compiled output
 /dist
-projects/seepsher-ui/dist/
 /tmp
 /out-tsc
 /bazel-out
 
 # Node
 /node_modules
-projects/seepsher-ui/node_modules/
 npm-debug.log
 yarn-error.log
 

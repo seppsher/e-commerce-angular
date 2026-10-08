@@ -40,7 +40,7 @@ The project demonstrates clean architecture, scalable state management, and two 
 - **Angular Material**
 - **NgRx Signals Store**
 - **Native Federation** — host application loads the payment remote as a microfrontend
-- **Private npm package** — reusable UI components and utilities from `@seppsher/seepsher-ui` on GitHub Packages
+- **Private npm package** — reusable UI components and utilities from `@seppsher/ui` on GitHub Packages
 - **TypeScript**
 - **RxJS**
 - **HTML, SCSS**
@@ -112,7 +112,7 @@ For GitHub Pages, configure the repository variable `PAYMENT_REMOTE_URL` with th
 
 ## Private UI package
 
-The reusable UI library is maintained in the separate [`seppsher/seepsher-ui`](https://github.com/seppsher/seepsher-ui) repository and will be published as `@seppsher/ui`. This app remains on the already published `@seppsher/seepsher-ui` package until the first release of the new package is available. To install dependencies locally, authenticate with a GitHub personal access token (classic) that has `read:packages`:
+The reusable UI library is maintained in the separate [`seppsher/seepsher-ui`](https://github.com/seppsher/seepsher-ui) repository and consumed as `@seppsher/ui` from GitHub Packages. To install dependencies locally, authenticate with a GitHub personal access token (classic) that has `read:packages`:
 
 ```bash
 npm login --scope=@seppsher --auth-type=legacy --registry=https://npm.pkg.github.com
