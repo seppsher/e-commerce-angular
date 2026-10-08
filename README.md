@@ -40,7 +40,7 @@ The project demonstrates clean architecture, scalable state management, and two 
 - **Angular Material**
 - **NgRx Signals Store**
 - **Native Federation** — host application loads the payment remote as a microfrontend
-- **Private npm package** — reusable UI components and utilities from `@seppsher/seepsher-ui` on GitHub Packages
+- **Private npm package** — reusable UI components and utilities from `@seppsher/ui` on GitHub Packages
 - **TypeScript**
 - **RxJS**
 - **HTML, SCSS**
@@ -112,14 +112,14 @@ For GitHub Pages, configure the repository variable `PAYMENT_REMOTE_URL` with th
 
 ## Private UI package
 
-The app uses the private npm package [`@seppsher/seepsher-ui`](https://github.com/seppsher/e-commerce-angular/pkgs/npm/seepsher-ui) from GitHub Packages. It contains reusable Angular UI components, directives, validators, interceptors, and services. To install dependencies locally, authenticate with a GitHub personal access token (classic) that has `read:packages`:
+The reusable UI library is maintained in the separate [`seppsher/seepsher-ui`](https://github.com/seppsher/seepsher-ui) repository and consumed as `@seppsher/ui` from GitHub Packages. To install dependencies locally, authenticate with a GitHub personal access token (classic) that has `read:packages`:
 
 ```bash
 npm login --scope=@seppsher --auth-type=legacy --registry=https://npm.pkg.github.com
 npm install
 ```
 
-Use your GitHub username and enter the token as the password. Do not commit the token. The library source remains in `projects/seepsher-ui` for browsing and package releases.
+Use your GitHub username and enter the token as the password. Do not commit the token.
 
 ---
 
